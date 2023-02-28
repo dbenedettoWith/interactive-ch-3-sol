@@ -30,7 +30,8 @@ export class ProductListComponent implements OnInit {
     );
   }
 
-  /* 
+  /* Explanation of best practices being applied 
+
   1. Use interface to define the type of Product object that we expect to receive from the API.
   2. Avoid using any type for the user variable, and instead, use the User interface to make the code more type-safe.
   3. Use the async pipe in the template to handle the subscription and unsubscription of the observable.
