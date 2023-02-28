@@ -20,12 +20,12 @@ export class ProductListComponent implements OnInit {
 
   getProducts(): void {
     this.products$ = this.dataService.getProducts().pipe(
-      tap((products) => console.log(products)),
       map((products) => {
         return products.map((product) => {
           return { ...product, available: product.inStock };
         });
-      })
+      }),
+      tap((products) => console.log(products))
     );
   }
 
