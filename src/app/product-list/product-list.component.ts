@@ -11,7 +11,6 @@ import { Observable, Subject, tap } from 'rxjs';
 })
 export class ProductListComponent implements OnInit {
   products$: Observable<Product[]>;
-  products: Product[] = [];
 
   constructor(private dataService: DataRetrieverService) {}
 
@@ -38,7 +37,8 @@ export class ProductListComponent implements OnInit {
   4. Use map() array method instead of using forEach() since map() method creates a new array with the results of calling a function on every element in the original array, while forEach doesn't create a new array
   4. Use the $ sign in the variable name to indicate that it is an Observable.
   5.Use the pipe() method to apply operators to the observable instead of performing work in subscribe().
-  6.Use the catchError operator to handle errors in case the API call fails, in the service or component level depending on requirements.. i.e do we need to show an error message or log to the backend etc.. 
+  6. declaring the return type of the method even if it is void
+  7.Use the catchError operator to handle errors in case the API call fails, in the service or component level depending on requirements.. i.e do we need to show an error message or log to the backend etc.. 
 
   */
 }
